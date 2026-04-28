@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NeoVision EDU AI — CCTV Attendance & School ERP</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg-orb orb-1"></div>
+    <div class="bg-orb orb-2"></div>
+    <div class="bg-grid"></div>
+
+    <header class="topbar glass">
+      <div class="left-zone">
+        <button class="icon-btn" aria-label="Open menu">☰</button>
+        <h1>NeoVision EDU AI</h1>
+      </div>
+      <div class="right-zone">
+        <span class="status-pill">🔒 Authorized Access Only</span>
+        <div class="role-switch glass-inner">
+          <label for="role">Role</label>
+          <select id="role">
+            <option value="teacher" selected>Teacher</option>
+            <option value="admin">Admin</option>
+            <option value="student">Student</option>
+          </select>
+        </div>
+      </div>
+    </header>
+
+    <main class="layout">
+      <aside class="sidebar glass">
+        <h2>Control Hub</h2>
+        <nav>
+          <a href="#dashboard" class="active">Dashboard</a>
+          <a href="#live-monitoring">Live AI Monitoring</a>
+          <a href="#teacher-subject">Subject Control</a>
+          <a href="#enrollment">Face Enrollment</a>
+          <a href="#attendance">Attendance Engine</a>
+          <a href="#marks">Marks & Analytics</a>
+          <a href="#alerts">Alerts & Reports</a>
+          <a href="#student-profile">Student Profile</a>
+          <a href="#fees">Fees Management</a>
+          <a href="#settings">Admin Settings</a>
+        </nav>
+      </aside>
+
+      <section class="content" id="dashboard">
+        <div class="hero glass">
+          <div>
+            <h2>AI-Powered CCTV Attendance & Smart School Management</h2>
+            <p>
+              Professional, subject-focused system for teachers with secure role-based
+              access, real-time face recognition attendance, behavior monitoring,
+              timetable automation, and advanced academic analytics.
+            </p>
+            <div class="hero-tags">
+              <span>Face Recognition &gt; 85% confidence</span>
+              <span>Anti-duplicate attendance logic</span>
+              <span>Subject-wise teacher control</span>
+              <span>Mobile + Tablet + Desktop</span>
+            </div>
+          </div>
+          <div class="hero-kpis">
+            <article class="kpi-card glass-inner">
+              <h3>Present</h3>
+              <strong>142</strong>
+              <small>Unique recognized faces</small>
+            </article>
+            <article class="kpi-card glass-inner">
+              <h3>Not Detected</h3>
+              <strong>09</strong>
+              <small>Low-confidence faces</small>
+            </article>
+            <article class="kpi-card glass-inner">
+              <h3>Unknown Alerts</h3>
+              <strong>03</strong>
+              <small>Unauthorized detections</small>
+            </article>
+          </div>
+        </div>
+
+        <section class="cards-grid" id="live-monitoring">
+          <article class="module glass">
+            <header>
+              <h3>Live CCTV Monitoring</h3>
+              <span class="live-dot">LIVE</span>
+            </header>
+            <div class="camera-grid">
+              <div class="camera-feed">
+                <span class="face-box recognized">Aanya • 94%</span>
+              </div>
+              <div class="camera-feed">
+                <span class="face-box low">Low Confidence • 68%</span>
+              </div>
+              <div class="camera-feed">
+                <span class="face-box unknown">Unknown</span>
+              </div>
+              <div class="camera-feed"></div>
+            </div>
+            <div class="button-row">
+              <button>⏺ Record</button>
+              <button>📸 Snapshot</button>
+              <button>🔍 Zoom</button>
+              <button>🔁 Switch Camera</button>
+            </div>
+          </article>
+
+          <article class="module glass" id="teacher-subject">
+            <header>
+              <h3>Teacher Subject Dashboard</h3>
+              <span>Role Restricted</span>
+            </header>
+            <div class="subject-cards">
+              <div class="subject glass-inner">
+                <h4>Mathematics</h4>
+                <p>Class 10-A • 46 Students</p>
+                <small>Mon/Wed/Fri • 09:00-10:00</small>
+              </div>
+              <div class="subject glass-inner">
+                <h4>Science</h4>
+                <p>Class 10-A • 46 Students</p>
+                <small>Tue/Thu • 11:00-12:00</small>
+              </div>
+              <div class="subject glass-inner">
+                <h4>English</h4>
+                <p>Class 10-B • 44 Students</p>
+                <small>Daily • 12:00-13:00</small>
+              </div>
+            </div>
+            <ul>
+              <li>Teachers can edit attendance/marks only for assigned subjects.</li>
+              <li>Admin can access all subjects and audit logs.</li>
+              <li>Students get view-only access.</li>
+            </ul>
+          </article>
+
+          <article class="module glass" id="enrollment">
+            <header>
+              <h3>Student Face Enrollment</h3>
+              <span class="warning">Enrollment Mode — Attendance Disabled</span>
+            </header>
+            <div class="enrollment-panel glass-inner">
+              <div class="camera-placeholder">
+                <div class="guide-frame"></div>
+              </div>
+              <div class="enroll-controls">
+                <label>Camera Source</label>
+                <select>
+                  <option>Laptop Camera</option>
+                  <option>Mobile Camera</option>
+                  <option>CCTV IP/RTSP</option>
+                  <option>USB Camera</option>
+                </select>
+                <p>Capture progress: <strong>15 / 30 images</strong></p>
+                <p>Quality: <span class="ok">Face clear, lighting good</span></p>
+                <button>Save Enrollment</button>
+                <button class="ghost">Re-Enroll / Retake</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="module glass" id="attendance">
+            <header>
+              <h3>Smart Attendance Engine</h3>
+              <span>Confidence threshold: &gt; 85%</span>
+            </header>
+            <ul class="logic-list">
+              <li>Mark Present only after multi-frame verified recognition.</li>
+              <li>Low confidence → Not Detected / Unverified.</li>
+              <li>No appearance in session → Absent.</li>
+              <li>Duplicate entries blocked per student per lecture.</li>
+              <li>IN/OUT time, late entry, early exit automatically tracked.</li>
+            </ul>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Student</th>
+                    <th>Status</th>
+                    <th>IN</th>
+                    <th>OUT</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Rahul Patel</td>
+                    <td class="ok">Present</td>
+                    <td>09:05</td>
+                    <td>12:31</td>
+                    <td><button class="edit-btn restricted">Edit</button></td>
+                  </tr>
+                  <tr>
+                    <td>Amit Singh</td>
+                    <td class="warn">Not Detected</td>
+                    <td>--</td>
+                    <td>--</td>
+                    <td><button class="edit-btn restricted">Mark</button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </article>
+
+          <article class="module glass" id="marks">
+            <header>
+              <h3>Marks Management & AI Analytics</h3>
+              <span>Teacher controlled • Subject-wise</span>
+            </header>
+            <div class="chart-row">
+              <div class="chart glass-inner">
+                <h4>Attendance vs Performance</h4>
+                <div class="fake-chart"></div>
+              </div>
+              <div class="chart glass-inner">
+                <h4>Grade Distribution</h4>
+                <div class="fake-chart pie"></div>
+              </div>
+            </div>
+            <div class="insights glass-inner">
+              <h4>AI Insights</h4>
+              <p>• Performance improving in Science (+8%).</p>
+              <p>• Low attendance linked to weak Mathematics scores.</p>
+              <p>• 5 students are at risk and need immediate support.</p>
+            </div>
+          </article>
+
+          <article class="module glass" id="alerts">
+            <header>
+              <h3>Alerts, Notifications & Reports</h3>
+              <span class="critical">Critical events highlighted in red</span>
+            </header>
+            <div class="alert-list">
+              <div class="alert critical-item">
+                <strong>Unknown person detected</strong>
+                <small>10:42 • Camera: Corridor 2</small>
+              </div>
+              <div class="alert">
+                <strong>Low attendance warning (under 75%)</strong>
+                <small>Class 10-A • Mathematics</small>
+              </div>
+              <div class="alert">
+                <strong>Marks published successfully</strong>
+                <small>Sent to students/parents</small>
+              </div>
+            </div>
+            <div class="button-row">
+              <button>Generate Subject Report</button>
+              <button>Export PDF</button>
+              <button>Export Excel</button>
+            </div>
+          </article>
+
+          <article class="module glass" id="student-profile">
+            <header>
+              <h3>Futuristic Student Profile</h3>
+              <span>Recognition + Academic + Behavior</span>
+            </header>
+            <div class="profile-card glass-inner">
+              <div class="avatar"></div>
+              <div>
+                <h4>Riya Verma</h4>
+                <p>ID: STU-1023 • Class 10-A • Dept: Science</p>
+                <p>Attendance: 91% • Rank: 5 • Badge: Top Performer</p>
+                <p>Last recognized: 09:04 • Camera: Classroom 1</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="module glass" id="fees">
+            <header>
+              <h3>Fees Management</h3>
+              <span>Secure manual entry + automation</span>
+            </header>
+            <div class="fees-kpis">
+              <div class="glass-inner"><small>Total Fees</small><strong>₹58,000</strong></div>
+              <div class="glass-inner"><small>Paid</small><strong>₹42,000</strong></div>
+              <div class="glass-inner"><small>Remaining</small><strong>₹16,000</strong></div>
+              <div class="glass-inner overdue"><small>Status</small><strong>Pending</strong></div>
+            </div>
+          </article>
+
+          <article class="module glass" id="settings">
+            <header>
+              <h3>Admin Settings & Security</h3>
+              <span>JWT/OAuth • Encryption • Audit Logs</span>
+            </header>
+            <ul class="logic-list">
+              <li>Camera configuration (RTSP/IP/USB).</li>
+              <li>Face database management and re-enrollment.</li>
+              <li>Role-based permissions and restricted fields.</li>
+              <li>Privacy controls, consent logs, retention policies.</li>
+            </ul>
+          </article>
+        </section>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
